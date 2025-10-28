@@ -12,7 +12,7 @@ The app simulates an Eliza-style conversational assistant where users can chat, 
 
 ## Publishing
 This project was published on **Netlify**
-Access it here: 
+Access it here: [https://mvc-crud-lab7.netlify.app/](MVC-CRUD-Chat)
 ---
 
 ## Learning Objectives
