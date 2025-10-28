@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>chat prototype (dom)</title>
-	<link rel="stylesheet" href="styles.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>chat assistant</title>
+	<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 	<main>
-		<header>
+		<header class="topbar">
+			<nav class="topbar-left">
+				<span>Eliza Chat Engine</span>
+				<span id="msg-count">0 messages</span>
+				<span id="last-saved">Saved: —</span>
+			</nav>
+
 			<h1>Chat Assistant</h1>
-			<p>Using Eliza AI</p>
+
+			<nav class="topbar-right">
+				<button id="export-btn" class="pill">Export</button>
+				<button id="import-btn" class="pill">Import</button>
+				<button id="clear-btn" class="pill">Clear</button>
+				<input id="file-input" type="file" accept="application/json" hidden />
+			</nav>
 		</header>
 
-		<section>
+		<section class="chat-window">
 			<ul id="messages"></ul>
 		</section>
 
-		<form id="chat-form">
-			<label for="chat-input" class="visually-hidden">type a message</label>
-			<input id="chat-input" type="text" placeholder="Type a message...">
-			<button id="send-btn" type="submit">Send</button>
-		</form>
+		<footer class="chat-input">
+			<form id="chat-form">
+				<label for="chat-input" class="visually-hidden">type a message</label>
+				<input
+					id="chat-input"
+					type="text"
+					placeholder="Type a message..."
+					autocomplete="off"
+				/>
+				<button type="submit">Send</button>
+			</form>
+		</footer>
 	</main>
 
-	<script type="module" src="script.js"></script>
+	<script type="module" src="js/app.js"></script>
 </body>
 </html>
